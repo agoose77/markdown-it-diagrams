@@ -1,0 +1,45 @@
+{
+  "name": "markdown-it-diagrams",
+  "version": "0.0.4",
+  "description": "Support svgbob and mermaid text-based diagrams in Markdown-It.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": ["lib/**/*"],
+  "scripts": {
+    "build": "tsc",
+    "test": "ts-mocha -p ./tsconfig.json -r jsdom-global/register src/**/*.spec.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agoose77/markdown-it-diagrams.git"
+  },
+  "keywords": [
+    "markdown-it",
+    "markdown",
+    "diagram",
+    "svgbob",
+    "mermaid"
+  ],
+  "author": "Angus Hollands",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/agoose77/markdown-it-diagrams/issues"
+  },
+  "homepage": "https://github.com/agoose77/markdown-it-diagrams#readme",
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/markdown-it": "0.0.7",
+    "@types/mocha": "^5.2.6",
+    "chai": "^4.2.0",
+    "jsdom": "^14.0.0",
+    "jsdom-global": "^3.0.2",
+    "mocha": "^6.0.2",
+    "ts-mocha": "^6.0.0",
+    "typescript": "^3.3.3333"
+  },
+  "dependencies": {
+    "markdown-it": "^8.4.2",
+    "mermaid": "^8.0.0",
+    "svgbob-wasm": "^0.1.0"
+  }
+}
