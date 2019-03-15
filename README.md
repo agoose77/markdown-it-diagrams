@@ -25,3 +25,6 @@ graph TD;
     C-->D;
 ```
 ~~~
+
+## API
+As a wasm module, the svgbob renderer exposes an async function `awaitRenderAvailable` which should be used to wait for the svgbob module to be loaded prior to markdown rendering.
