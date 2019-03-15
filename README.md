@@ -36,10 +36,6 @@ import * as MarkdownIt from "markdown-it";
 
 let md = new MarkdownIt({
   html: true,
-  linkify: true,
-  typographer: true,
-  langPrefix: `cm-s-${CodeMirrorEditor.defaultConfig.theme} language-`,
-  highlight: highlightCode
 }).use(diagramPlugin);
 
 let someMarkdown = "``` bob \n" +
