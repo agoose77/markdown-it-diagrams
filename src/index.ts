@@ -15,7 +15,9 @@ export async function awaitRenderAvailable() {
 
 export function diagramPlugin(md: MarkdownIt, options: any) {
     // Setup Mermaid
-    Mermaid.initialize({});
+    Mermaid.initialize({
+        securityLevel: 'loose'
+    });
 
     function getLangName(info: string): string {
         return info.split(/\s+/g)[0];
@@ -30,15 +32,14 @@ export function diagramPlugin(md: MarkdownIt, options: any) {
         let info = token.info.trim();
         let langName = info ? getLangName(info) : "";
         let imageHTML: string = "";
-        let imageAttrs: any[] = [];
+        let imageAttrs: string[][] = [];
 
         // Only handle custom token
         switch (langName) {
             case "bob": {
                 try {
                     imageHTML = svgbob.convert_string(token.content);
-                }
-                catch (e){
+                } catch (e) {
                     console.log(`Error in running svgbob.convert_string: ${e}`);
                 }
                 break;
@@ -59,11 +60,9 @@ export function diagramPlugin(md: MarkdownIt, options: any) {
                         // Store HTML
                         imageHTML = html;
                     }, element);
-                }
-                catch (e) {
+                } catch (e) {
                     console.log(`Error in running Mermaid.mermaidAPI.render: ${e}`);
-                }
-                finally {
+                } finally {
                     element.remove();
                 }
                 break;
