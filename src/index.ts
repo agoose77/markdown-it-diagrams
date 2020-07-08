@@ -62,6 +62,7 @@ export function diagramPlugin(md: MarkdownIt, options: any) {
                     }, element);
                 } catch (e) {
                     console.log(`Error in running Mermaid.mermaidAPI.render: ${e}`);
+                    return `<div class="alert alert-warning">${e.str}</div>`;
                 } finally {
                     element.remove();
                 }
