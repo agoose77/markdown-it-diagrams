@@ -10,7 +10,7 @@
     "license": "(MIT OR Apache-2.0)",
     "dependencies": {
         "markdown-it-diagrams": "file:../",
-        "markdown-it": "^10.0.0",
+        "markdown-it": "^12.3.2",
         "copy-webpack-plugin": "^5.0.0",
         "webpack": "^4.16.3",
         "webpack-cli": "^3.1.0",
