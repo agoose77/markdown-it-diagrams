@@ -29,9 +29,10 @@ export async function loadPluginFactory() {
 
             // Only handle custom token
             switch (langName) {
+                case "bob": // Legacy
                 case "svgbob": {
                     try {
-                        imageHTML = svgbob.convert_string(token.content);
+                        imageHTML = svgbob.render(token.content);
                     } catch (e) {
                         console.log(`Error in running svgbob.convert_string: ${e}`);
                     }
