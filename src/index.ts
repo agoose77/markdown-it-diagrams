@@ -29,7 +29,7 @@ export async function loadPluginFactory() {
 
             // Only handle custom token
             switch (langName) {
-                case "bob": {
+                case "svgbob": {
                     try {
                         imageHTML = svgbob.convert_string(token.content);
                     } catch (e) {

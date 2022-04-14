@@ -1,6 +1,6 @@
 {
   "name": "markdown-it-diagrams",
-  "version": "0.2.0-alpha.0",
+  "version": "1.0.0",
   "description": "Support svgbob and mermaid text-based diagrams in Markdown-It.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "markdown-it": "^10.0.0",
-    "mermaid": "^8.8.4",
-    "svgbob-wasm": "0.4.1-a0"
+    "mermaid": "^9.0.0",
+    "svgbob-wasm": "^1.0.0"
   }
 }
